@@ -11,6 +11,11 @@ class AndroidLockTask {
     return version;
   }
 
+  static Future<dynamic> stop() async {
+    final a = await _channel.invokeMethod('stop');
+    return null;
+  }
+  
   static Future<dynamic> start() async {
     final a = await _channel.invokeMethod('start');
     return null;
