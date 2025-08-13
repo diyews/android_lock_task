@@ -48,6 +48,8 @@ public class AndroidLockTaskPlugin implements FlutterPlugin, MethodCallHandler, 
       result.success("Android " + android.os.Build.VERSION.RELEASE);
     } else if (call.method.equals("start")) {
       activity.startLockTask();
+    } else if (call.method.equals("stop")) {
+      activity.stopLockTask();
     } else if (call.method.equals("restart")) {
       activity.stopLockTask();
       activity.startLockTask();
